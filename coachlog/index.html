@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Log - Track Your Coaching Hours</title>
+    <style>
+        :root {
+            --primary: #B5C4A0;
+            --secondary: #E9B997;
+            --white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --light-bg: #F8F9FA;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-image {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hero {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .screenshot {
+            width: 280px;
+            height: 580px;
+            background-color: var(--light-bg);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--text-dark);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+        
+        .features {
+            padding: 80px 0;
+            text-align: center;
+            background-color: var(--white);
+        }
+        
+        .feature {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .feature p {
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+        
+        .legal-section {
+            padding: 60px 0;
+            background-color: var(--light-bg);
+        }
+        
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .legal-content h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: var(--primary);
+            text-align: center;
+            padding: 20px 0;
+            color: var(--white);
+        }
+        
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .indented {
+            text-indent: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .screenshots {
+                gap: 15px;
+            }
+            .screenshot {
+                width: 240px;
+                height: 480px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo-container">
+                <img src="./gfx/coach_app_logo_white_1024.png" alt="Coach Log Logo" class="logo-image">
+                <span class="logo-text">Coach Log</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#support">Support</a>
+                <a href="#privacy">Privacy</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Track Your Coaching Hours</h1>
+            <p>The simple way to log and manage your professional coaching</p>
+            <a href="#download" class="cta-button">Download Now</a>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="screenshots">
+                <div class="screenshot">
+                    <img src="./gfx/home.png" alt="Coach Log Screenshot - Home">
+                </div>
+                <div class="screenshot">
+                    <img src="./gfx/add-session.mp4" alt="Coach Log Screenshot - New session">
+                </div>
+                <div class="screenshot">
+                    <img src="./gfx/client.png" alt="Coach Log Screenshot - Client">
+                </div>
+            </div>
+            <div class="feature">
+                <h3>Easy Time Tracking</h3>
+                <p>Log your paid and pro bono coaching hours with just a few taps.</p>
+            </div>
+            <div class="feature">
+                <h3>Detailed Reports</h3>
+                <p>Generate comprehensive reports for certification and compliance.</p>
+            </div>
+            <div class="feature">
+                <h3>Client Management</h3>
+                <p>Visualise client activity and history.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="legal-section">
+        <div class="legal-content">
+            <h2>Support</h2>
+            <p>Need help with Coach Log? Our support team is here to assist you. For any questions or assistance, please contact us at <a href="mailto:coachlog@padgett.com.au">coachlog@padgett.com.au</a>.</p><br />
+            <p>We're committed to providing excellent support to help you make the most of Coach Log, and will endeavour to respond with in two business days.</p>
+        </div>
+    </section>
+
+    <section id="privacy" class="legal-section">
+        <div class="legal-content">
+            <h2>Privacy Policy</h2>
+            
+            <p>Effective Date: 10 Feb, 2025</p><br />
+
+            <p><b>Coach Log</b> values your privacy. This privacy policy explains how we handle your information.</p><br />
+    
+            <p><b>1. Information Collection and Use</b></p><br />
+
+            <p>We do not collect, store, or share any personal information on external servers. However, <b>Coach Log</b> uses <b>iCloud</b> to synchronise your app data across your own devices.</p><br />
+            
+            <p>
+                    <p class="indented"> • <b>iCloud Synchronisation:</b> The data stored in iCloud is private and accessible only to you and your iCloud-connected devices. We do not have access to this data.</p>
+                    <p class="indented"> • The data stored in iCloud is governed by Apple’s <a href="https://www.apple.com/legal/privacy/">Privacy Policy</a>.
+            </p><br />
+
+            <p><b>2. No Third-Party Services</b></p><br />
+
+            <p>Our app does not use any third-party services that collect user data beyond Apple’s iCloud services for synchronization.</p><br />
+
+            <p><b>3. Changes to This Privacy Policy</b></p><br />
+
+            <p>We may update this policy occasionally to reflect changes in our app’s functionality or legal requirements. We will notify users by updating the “Effective Date” at the top of this policy.</p><br />
+
+            <p><b>4. Contact Us</b></p><br />
+
+            <p>If you have any questions or concerns about this privacy policy, please contact us at <a href="mailto:coachlog@padgett.com.au">coachlog@padgett.com.au</a></p>
+        </div>
+    </section>
+
+    <section id="download" class="hero">
+        <div class="container">
+            <h2>Start Tracking Your Coaching Hours</h2>
+            <p>Available on the App Store for iPhone</p>
+            <a href="https://apps.apple.com/your-app-link" class="cta-button" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#support">Support</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#features">Features</a>
+            </div>
+            <p>&copy; 2025 Coach Log. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
