@@ -41,6 +41,32 @@
             z-index: 1000;
         }
         
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column; /* Stack logo and nav-links vertically */
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo-container {
+                display: flex;
+                flex-direction: row; /* Ensure text stays in one line */
+                align-items: center;
+                justify-content: center;
+            }
+
+            .logo-text {
+                white-space: nowrap; /* Prevent "Coach Log" from splitting */
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: column; /* Stack nav links vertically */
+                gap: 10px; /* Add space between links */
+                margin-top: 10px; /* Add spacing below the logo */
+            }
+        }
+        
         nav {
             display: flex;
             justify-content: space-between;
