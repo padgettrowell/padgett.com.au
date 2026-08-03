@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Rat Report</title>
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --ink: #23201c;
+    --ink-soft: #5f5951;
+    --rule: #e2ddd4;
+    --accent: #9a5b2d;
+    --accent-soft: #f2e7dc;
+    --warn-bg: #fdf3e7;
+    --warn-ink: #8a4b12;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171614;
+      --surface: #1e1d1a;
+      --ink: #ece8e1;
+      --ink-soft: #a9a29a;
+      --rule: #34322d;
+      --accent: #d99a63;
+      --accent-soft: #2b2621;
+      --warn-bg: #2a231b;
+      --warn-ink: #e0ab72;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 Georgia, "Iowan Old Style", "Times New Roman", serif;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  main {
+    max-width: 44rem;
+    margin: 0 auto;
+  }
+
+  header {
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    line-height: 1.1;
+    margin: 0 0 .5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .standfirst {
+    margin: 0;
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  section {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 0 0 1.25rem;
+  }
+
+  h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .8rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  h3 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .75rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 1.5rem 0 .75rem;
+  }
+
+  .log {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .log > li {
+    padding: .55rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  .log > li:first-child { border-top: 0; padding-top: 0; }
+  .log > li:last-child { padding-bottom: 0; }
+
+  .time {
+    display: inline-block;
+    min-width: 5.25rem;
+    margin-right: .5rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .8rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 4px;
+    padding: .1rem .4rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .log ul {
+    margin: .5rem 0 0 5.75rem;
+    padding-left: 1.1rem;
+    color: var(--ink-soft);
+  }
+
+  .log ul li { margin: .25rem 0; }
+
+  p { margin: 0 0 .9rem; }
+  p:last-child { margin-bottom: 0; }
+
+  .notice {
+    background: var(--warn-bg);
+    color: var(--warn-ink);
+    border-left: 3px solid currentColor;
+    border-radius: 4px;
+    padding: .75rem 1rem;
+    margin: 1.25rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: .85rem;
+    line-height: 1.5;
+  }
+
+  blockquote {
+    margin: .9rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--rule);
+    color: var(--ink-soft);
+    font-style: italic;
+  }
+
+  q { quotes: "\201C" "\201D"; }
+
+  @media (max-width: 34rem) {
+    .time { display: block; min-width: 0; width: max-content; margin-bottom: .35rem; }
+    .log ul { margin-left: 1rem; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>The Rat Report</h1>
+    <p class="standfirst">The following is a true account over nine days in July 2026.</p>
+  </header>
+
+  <section>
+    <h2>Day 1</h2>
+    <ul class="log">
+      <li><span class="time">9:00pm</span>Heard Kath in the kitchen. Pulled out the fridge. Spotted her for the first time. She big. Changed name to Big Ass Kath. Chased her round the island. Cleaned up behind the fridge. Put out black trap with peanut butter.</li>
+      <li><span class="time">10:00pm</span>Heard trap go off. Checked trap. Trap empty. Suspect trap is too small for Big Ass Kath.</li>
+      <li><span class="time">10:30pm</span>Heard sounds of someone dragging a trash bag outside bedroom door. Got up. Found an inflated yoghurt packet wedged between dog gate bars. Assumed Big Ass Kath didn't like to travel much, so named unsub Kim.</li>
+      <li><span class="time">8:00am</span>Woke to find two bananas in the banana bowl brutally savaged. Big Ass Kath blamed loudly. Made plans to buy bigger traps.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 2</h2>
+    <ul class="log">
+      <li><span class="time">Daytime</span>Purchased a rat trap, 4&times; larger than current mouse trap.</li>
+      <li><span class="time">Evening</span>Set big trap in kitchen for Big Ass Kath and little trap in lounge for Kim.</li>
+      <li><span class="time">10&ndash;12am</span>Periodic sounds of burglars rummaging around lounge room. Sprang into action and turned on the lights to&hellip; nothing. They sneaky. Suspected burglars after doggo food, so pushed food bag near ledge edge to test theory.</li>
+      <li><span class="time">12:00am</span>Sat silently on couch, waiting. Soon, could hear bear emerge from cave behind piano. Renamed Kim to Big Ass Kim, or perhaps Big Ass Kath Who Likes to Travel, as it galloped towards the kitchen.</li>
+      <li><span class="time">12:30am</span>Heard crash, came out to doggo food on floor. Inspection revealed hole chewed in bag. Decanted doggo food to cereal container. You're welcome, Ren.</li>
+      <li><span class="time">7:30am</span>Awoke to small trap sprung, clean of peanut butter and partially dismantled. Big trap untouched. Two more bananas cruelly taken. Ren discovered near-empty pack of wet wipes had been relocated from kitchen to lounge. Chased Ren for 20 mins to get the pack back.</li>
+    </ul>
+
+    <h3>Night-time prep</h3>
+    <ul class="log">
+      <li><span class="time">10:30pm</span>Increased arsenal to three heavy-duty rat traps. Added mouse trap under kitchen sink at site of recent activity. Removed bananas &mdash; they'd seen enough, and I wanted to reduce available food sources. Turned out the lights, put in a single earphone, turned on an audiobook and waited.</li>
+      <li><span class="time">12:00am</span>The night was quiet. Went to sleep.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 3</h2>
+    <ul class="log">
+      <li><span class="time">8:00am</span>All four traps appeared untouched. Removed traps for Ren's safety, made us both breakfast and sat outside to assess next move.</li>
+      <li><span class="time">10:00am</span>Decided further investigation required. Pulled out fridge, known lair of Big Ass Kath. Lair unoccupied. Discovered Ren's pack of doggo treats and a pack of crisps, both shredded, and half a dozen wood chips approx. 2 cm wide by 4 cm long. Was Kath renovating?
+        <p>Unable to move piano without help &mdash; will have to wait. Couldn't face opening chest of drawers given previous horrific discovery (unreported here). Moved chest of drawers out from wall: no evidence of Kath, Kim or relations.</p>
+        <p>Out of ideas. Decided to crowdsource options. Perhaps it's time to change tactics from trapping to hunting. For that, I'd need a professional. Will float adoption of indoor Carnivorous Autonomous Terror (CAT) with family.</p>
+      </li>
+      <li><span class="time">Later</span>Response from family negative on CAT adoption idea. Suspect censorship in idea as delivered from remote parental unit to child units.</li>
+    </ul>
+
+    <h3>Night-time prep</h3>
+    <ul class="log">
+      <li><span class="time">10:30pm</span>Tried to think like a rat. Where would a rat run? Deployed trap arsenal to likely ingress and egress of known and suspected lairs.
+        <p>Again, the night was quiet. Too quiet. Wondered if name change to Big Ass Kath Who Likes to Travel a Lot might be warranted. Can only hope, but would need proof. A postcard would suffice. Went to sleep.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 4</h2>
+    <ul class="log">
+      <li><span class="time">8:00am</span>Awoke to message from Starlink: <q>Slow cable connection. Your Starlink system is reporting a slower-than-expected cable connection between your Starlink and router for service line {redacted}.</q> Amazed at specificity of diagnostic. Horrified at thought: being denied bananas, is Kath eating my cabling?
+        <p>All four traps appeared untouched. Removed traps for Ren's safety. Internet in house not working. Inspected cable. Cable chewed through in multiple places. Inspected damage to cable again, closely. Cable appears to be gnawed through in several locations &mdash; each with holes about 2 cm apart. Either Kath's maw is monstrous, or Kath is not the culprit. Eyed Ren. Ren rolled over for a belly rub, shot off to the kitchen and grabbed the wash cloth off the sink. Didn't bother to chase him this time. Recalled conversation with spouse from yesterday about dangers of leaving Ren unattended, and sighed. This was my fault. Not sure which is larger: fear of climbing on roof to replace cable, or frustration at paying a professional to do it.</p>
+        <p>Perplexed about Kath. No postcard. No signs of spontaneous combustion. Growing unease that she's closeted herself, spawning minions, and I'll soon be overrun.</p>
+      </li>
+    </ul>
+
+    <h3>Night-time prep</h3>
+    <ul class="log">
+      <li><span class="time">10:30pm</span>Out of banana, so camouflaged traps by rubbing pear on trap surfaces to hide my scent. Thanks for the tip, reader @DT.
+        <p>I've not seen or heard evidence of Kath for two days. Left single slice of pear in otherwise empty fruit bowl to test if Kath had actually packed her bags or not.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 5</h2>
+    <ul class="log">
+      <li><span class="time">8:00am</span>Internet still out. Thanks to reader @AP, discovered $230 Starlink cable is actually Cat6e ethernet, so I can cut and splice it with the correct tool and a few parts from Bunnings. Put &lsquo;Bunnings&rsquo; on day's to-do list.
+        <p>Traps unsprung. Slice of pear gone. Confirmed: Kath is still in the building, and clearly on high alert. Turned to Google to research trap building, and cage traps from Bunnings &mdash; since it's on my to-do list already.</p>
+        <p>Reader @DW suggested I start thinking about book deals and movie rights. Idly wondered who would play me. Russell Crowe, perhaps. Formerly fit, now a bit chonky. Matching beards. Yeah, he'd do. Back to researching bucket traps. Russ would definitely build his own.</p>
+      </li>
+      <li><span class="time">Later</span>Cue A-Team music. Cue preparation montage:
+        <ul>
+          <li>Russ visits Bunnings, emerges with supplies and purposeful swagger.</li>
+          <li>Russ disregarding appropriate eye protection. Close-up of drill, sound of drilling, sparks fly.</li>
+          <li>Russ wearing reading glasses, checks plan. Nods with grim determination.</li>
+          <li>Final assembly: duct tape, C4 and stoic determination.</li>
+        </ul>
+        <p>Reality is closer to a plastic bucket, YouTube, painter's tape and the cardboard tube from an expired roll of paper towel: I drill, disregarding eye protection. Russ and I have that in common. I emerge with a bucket trap &mdash; a 20 L bucket with a pivoting lid and a counterweight. Tried to think of a punny name to write on the side, but came up blank.</p>
+      </li>
+    </ul>
+
+    <h3>Night-time prep</h3>
+    <ul class="log">
+      <li><span class="time">11:30pm</span>Put Ren to bed. Set out &lsquo;classic&rsquo; traps in new location. Placed Nanbucket (yeah, it'll do for now), baited with pear and peanut butter, in the kitchen. Am quietly hopeful. Wonder if I'll hear it trigger in the night.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 6</h2>
+    <ul class="log">
+      <li><span class="time">8:30am</span>Traps empty. Nanbucket appears to have spent the night alone, untouched. I feel its isolation, its withdrawal from being rejected by Kath, unable to fulfil its purpose. The pear has browned. I'm overcome with disappointment. The plan did not come together.
+        <p>I can hear movement in the house. Ren is outside, &lsquo;taking care of business&rsquo;. I can't pinpoint where the sound is coming from. Perhaps around the fireplace? Phone dings with a message &mdash; sounds stop. Respond to message. Let Ren, who's scratching at the back door, in. Move my chair to get a clearer view of the lounge, sit down and wait. Ren pulls a shopping bag from the basket by the front door and tears around the house with it, full zoomy mode. Not sure his exuberance and desire to play matches with my attempt to sit quietly, waiting for Kath to make a move.</p>
+        <p>Is it time to call a professional?</p>
+      </li>
+      <li><span class="time">Later</span>Sitting in lounge listening to audiobook. Ren outside, possibly eating possum poo off the kids' trampoline. Spotted Kath run across kitchen floor and into a small hole leading into kitchen pots and pans cupboard. New lair unlocked.
+        <p>Pulled out fridge, and praise Chesus, Kath has been hard at work. Two packs of Ren's dog chews, a whiteboard marker, more wood chips and a head of garlic. Where did the dog treats even come from?</p>
+        <p>Surrounded small lair hole exit with full arsenal &mdash; three large rat traps and Nanbucket. Prepared to go out for the evening.</p>
+      </li>
+      <li><span class="time">10:40pm</span>Returned home, traps unsprung. Spent some time with Ren on couch, then went to bed.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 7</h2>
+    <ul class="log">
+      <li><span class="time">9:00am</span>Traps unsprung. Concluded Nanbucket a failure, my A-Team fantasy a fun diversion but ultimately fruitless. Resolved to return to Bunnings and purchase a cage trap. I'll add the cost to their movie product placement fee.
+        <p>Need to pull out pots drawer to get to Kath's lair under kitchen cabinets. Can't face it this morning. Too crushed from not being the A-Team. Will do so this afternoon.</p>
+      </li>
+      <li><span class="time">Later</span>Pulled out pots drawer to check Kath's summer lair. Unfortunately, the ~3&times;4 cm gap doesn't go into the cupboard, or the drawer &mdash; it goes under them, and is inaccessible. I shudder to think what's been dragged down there, never to see the light of day again.
+        <p>Donned gloves to cover my scent (thanks, reader @DT) and read instructions for the cage trap. Took my last banana out of protective custody (the fridge) and baited the trap with a slice.</p>
+        <p>Set trap up outside Kath's summer lair.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 8</h2>
+    <ul class="log">
+      <li><span class="time">8:15am</span>Lying in bed reading. Hear trap go off. Check trap. Trap occupied. Hello, Big Ass Kath.</li>
+      <li><span class="time">Later</span>Took Ren and BA Kath to fire trail in Mundaring. Released Kath, walked Ren. Felt sense of relief. Added bananas to Coles order. Wondered: was this ordeal over?</li>
+      <li><span class="time">11:00pm</span>Deployed classic trap arsenal &lsquo;just in case&rsquo;. Cleaned all kitchen surfaces so I could spot evidence of Kath's potential brood, or Kim &mdash; I hadn't forgotten they were a possibility.
+        <p>I'd sat with Ren just before bedtime, and he'd kept worrying at and around his crate, so focused traps there, wondering if he knew something I didn't.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Day 9</h2>
+    <ul class="log">
+      <li><span class="time">7:44am</span>Bolted upright, awoken by smoke alarm blaring. Had flashbacks to bushfire in 2023. Had to get Ren first. <em>Don't step in the traps around his crate</em>, I told myself. Slight haze, but no smoke in hallway or lounge. Eyeballed Ren's crate. Cover was down. Traps unsprung. Ren not reacting. Alarm blaring. Ran and checked bedrooms &mdash; nothing. Ran to kitchen &mdash; nothing. Except: the one rat trap I'd put in the kitchen had sprung and caught Kim. Alarm blaring. Had a thought &mdash; why wasn't Ren reacting <em>at all?</em> Ran back to lounge, removed traps, lifted Ren's cover and opened cage to check him. Alarm stopped. Ren stretched and shook, totally unfazed. Closed Ren back in crate. Went around house checking light switches and any electrical cables, wondering if Kim's brood had chewed through one, causing a short, which triggered the smoke alarm &mdash; creating a diversion so they could spring Kim.</li>
+    </ul>
+
+    <p class="notice"><strong>Warning.</strong> The following section is possibly not suitable for child units. It doesn't end as well for Kim as it did for Kath.</p>
+
+    <p>Kim was in bad shape. The rat trap had crushed her hindquarters. She was still alive, and likely in pain. Remembered the scene in <em>Game of Thrones</em> where Ned Stark executed the deserter. <q>Do you know why <strong>I</strong> did it?</q> he asks his young son.</p>
+
+    <blockquote>The man who passes the sentence should swing the sword.</blockquote>
+
+    <p>&hellip;he said, answering his own question. Took Kim outside to the wood chopping block. Felt like an asshole.</p>
+
+    <p class="notice"><strong>End of graphic content.</strong></p>
+
+    <p>Still don't know what caused the smoke alarm to go off. Hoped that with Kath and Kim out of the picture, this was finally over.</p>
+  </section>
+
+</main>
+</body>
+</html>
